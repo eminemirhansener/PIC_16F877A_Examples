@@ -1,4 +1,0 @@
->>> Warning 203 "receiver.c" Line 26(1,1): Condition always TRUE
-      Memory usage:   ROM=8%      RAM=7% - 11%
-      0 Errors,  1 Warnings.
-Build Successful.
