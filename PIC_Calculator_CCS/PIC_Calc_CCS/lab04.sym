@@ -1,0 +1,126 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+006     lcd
+006     lcdlat
+008     PSP_DATA
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020-021 strtok.save
+022-025 _Randseed
+026     MAIN.result
+027     MAIN.num1
+028     MAIN.num2
+029-02E MAIN.chr
+02F     keypad_control.input
+02F     lcd_init.i
+02F     @PRINTF_D_920.P1
+02F     lcd_getc.x
+02F     MAIN.@SCRATCH1
+02F     @PSTRINGC7_920.@SCRATCH1
+030     @MUL88.P1
+030     @PRINTF_D_920.P2
+030     lcd_getc.y
+030     lcd_init.@SCRATCH1
+030     @PSTRINGC7_920.@SCRATCH2
+031     @MUL88.P1
+031     lcd_getc.value
+031     @PSTRINGC7_920.@SCRATCH3
+031     @PRINTF_D_920.@SCRATCH1
+032     lcd_getc.@SCRATCH1
+032     @PSTRINGC7_920.@SCRATCH4
+032     @PRINTF_D_920.@SCRATCH2
+033     @PRINTF_D_920.@SCRATCH3
+034     @PRINTF_D_920.@SCRATCH4
+035     lcd_putc.c
+035     @DIV88.P1
+036     lcd_gotoxy.x
+036     @DIV88.P1
+036     @delay_ms1.P2
+037     lcd_gotoxy.y
+037     @DIV88.@SCRATCH1
+038     lcd_gotoxy.address
+039     lcd_gotoxy.@SCRATCH1
+03A     lcd_send_byte.address
+03B     lcd_send_byte.n
+03C     lcd_read_byte.low
+03C     lcd_send_byte.@SCRATCH1
+03D     lcd_read_byte.high
+03D     lcd_send_nibble.n
+03E     lcd_read_byte.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+086     lcdtris
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  LCD_INIT_STRING.call
+000008  LCD_INIT_STRING.data
+00000C  @const941.call
+000013  @delay_ms1
+000028  lcd_send_nibble
+000034  lcd_read_nibble
+00003A  lcd_read_byte
+00005C  lcd_send_byte
+00007C  lcd_init
+0000AF  lcd_gotoxy
+0000C1  lcd_putc
+0000ED  keypad_control
+0001F0  lcd_getc
+000202  @PSTRINGC7_920
+00024F  @MUL88
+000274  @DIV88
+000289  @PRINTF_D_920
+0002E2  MAIN
+0002E2  @cinit1
+0002E9  @cinit2
+0136  StrtoulGO
+0136  StrtolGO
+0307  restart
+
+Project Directory:
+    D:\Storage\Emirhan\5. Term\Microprocessors and Programming\CCS C\PIC Calculator\
+
+Project Files:
+    lab04.c                                                 [05-Dec-22 11:41  CRC=26E6F6B5]
+    C:\Program Files (x86)\PICC\Devices\16F877A.h           [21-Jun-13 16:04  CRC=4E65664C]
+    C:\Program Files (x86)\PICC\Drivers\stdio.h             [31-Jul-07 13:24  CRC=4E4534F4]
+    C:\Program Files (x86)\PICC\Drivers\string.h            [14-Jul-11 10:13  CRC=23EDEC8F]
+    C:\Program Files (x86)\PICC\Drivers\stddef.h            [16-Jul-10 09:27  CRC=897CEC6C]
+    C:\Program Files (x86)\PICC\Drivers\ctype.h             [03-Jan-08 13:55  CRC=2D1F019F]
+    C:\Program Files (x86)\PICC\Drivers\stdlib.h            [08-Jun-11 14:39  CRC=0B6669CF]
+    C:\Program Files (x86)\PICC\Drivers\lcd.c               [23-Aug-12 09:01  CRC=D28E8746]
+
+Source signature=4E9EE4EA
+
+Units:
+    lab04 (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   lab04.xsym
+    Errors:      lab04.err
+    Ext Symbols: lab04.esym
+    INHX8:       lab04.hex
+    Symbols:     lab04.sym
+    List:        lab04.lst
+    Debug/COFF:  lab04.cof
+    Project:     lab04.ccspjt
+    Call Tree:   lab04.tre
+    Statistics:  lab04.STA
